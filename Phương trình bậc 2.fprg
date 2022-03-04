@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="duthong"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-24 10:47:57 PM"/>
+        <attribute name="created" value="ZHV0aG9uZztERVNLVE9QLU1TSDNPUlA7MjAyMi0wMi0yNDswOTo1MzoyMCBQTTszMTQ1"/>
+        <attribute name="edited" value="ZHV0aG9uZztERVNLVE9QLU1TSDNPUlA7MjAyMi0wMi0yNDsxMDo0Nzo1NyBQTTszOzMyNjA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a" type="Real" array="False" size=""/>
+            <declare name="b" type="Real" array="False" size=""/>
+            <declare name="c" type="Real" array="False" size=""/>
+            <declare name="x" type="Real" array="False" size=""/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <input variable="c"/>
+            <if expression="a=0">
+                <then>
+                    <if expression="b=0">
+                        <then>
+                            <output expression="&quot;Ph&#432;&#417;ng tr&#236;nh v&#244; nghi&#7879;m &quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <assign variable="x" expression="-c/b"/>
+                            <output expression="&quot;Ph&#432;&#417;ng tr&#236;nh c&#243; nghi&#7879;m x=&quot;" newline="False"/>
+                            <output expression="x" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <declare name="denta" type="Real" array="False" size=""/>
+                    <assign variable="denta" expression="(b*b)-(4*a*c)"/>
+                    <if expression="denta&lt;0">
+                        <then>
+                            <output expression="&quot;Ph&#432;&#417;ng tr&#236;nh v&#244; nghi&#7879;m&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="denta=0">
+                                <then>
+                                    <assign variable="x" expression="-b/(2*a)"/>
+                                    <output expression="&quot;Ph&#432;&#417;ng tr&#236;nh c&#243; nghi&#7879;m k&#233;p x=&quot;" newline="False"/>
+                                    <output expression="x" newline="True"/>
+                                </then>
+                                <else>
+                                    <declare name="x1" type="Real" array="False" size=""/>
+                                    <declare name="x2" type="Real" array="False" size=""/>
+                                    <assign variable="x1" expression="(-b+sqrt(denta))/(2*a)"/>
+                                    <assign variable="x2" expression="(-b-sqrt(denta))/(2*a)"/>
+                                    <output expression="&quot;Ph&#432;&#417;ng tr&#236;nh c&#243; hai nghi&#7879;m ph&#226;n bi&#7879;t x1= &quot;" newline="False"/>
+                                    <output expression="x1" newline="False"/>
+                                    <output expression="&quot; , x2= &quot;" newline="False"/>
+                                    <output expression="x2" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
